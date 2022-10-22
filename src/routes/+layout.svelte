@@ -45,7 +45,7 @@
 			</span>
 		</span>
 	</div>
-	<div class="menu">
+	<div class="menu" style="animation-delay: 50ms;">
 		<h1>Ridge <br /> Computer <br /> Science <br /> Club</h1>
 		{#each links as link}
 			<a
@@ -199,6 +199,10 @@
 		display: none;
 		transition: var(--menu-transition);
 	}
+	.menu,
+	.content {
+		animation: slideIn 0.5s cubic-bezier(0, 0.61, 0.25, 1) backwards;
+	}
 	@media (max-width: $mobile-threshold) {
 		main {
 			gap: 0;
@@ -259,6 +263,12 @@
 				filter: blur(26px) grayscale(1);
 				opacity: 0.1;
 			}
+		}
+	}
+	@keyframes slideIn {
+		0% {
+			transform: translateY(200px);
+			opacity: 0;
 		}
 	}
 </style>
