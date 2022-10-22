@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>{title ? title + ' | ' : ''}Ridge Comp Sci Club</title>
-	<meta property="og:title" content="Ridge Comp Sci Club" />
+	<meta property="og:title" content={(title ? title + ' | ' : '') + 'Ridge Comp Sci Club'} />
 	{#if description}
 		<meta name="description" content={description} />
 		<meta property="og:description" content={description} />
