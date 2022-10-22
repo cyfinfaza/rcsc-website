@@ -1,0 +1,1 @@
+# ridge comp sci club website
