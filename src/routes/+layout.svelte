@@ -41,7 +41,7 @@
 			RCSC<br />
 			<span style="font-weight: 200; text-transform: none;">
 				<span style="font-weight: 500;">#</span>
-				{viewing.name}
+				{viewing?.name ?? ''}
 			</span>
 		</span>
 	</div>
@@ -112,19 +112,19 @@
 		width: 100%;
 		max-width: 1300px;
 		// gap: min(4vw, 64px);
-		gap: 24px;
-		padding: 24px;
+		gap: var(--padding-1);
+		padding: var(--padding-1);
 		margin-block: 32px;
 		--menu-transition: 350ms cubic-bezier(0.39, -0.01, 0.05, 1.03);
 	}
 	.menu {
 		position: sticky;
-		top: 24px;
+		top: calc(var(--padding-1) + 32px);
 		align-self: flex-start;
 		text-align: right;
 		max-width: 250px;
 		transition: var(--menu-transition);
-		max-height: calc(100vh - 24px);
+		max-height: calc(100vh - var(--padding-1));
 		overflow: auto;
 		* {
 			margin: 0;
@@ -232,8 +232,8 @@
 			color: var(--accent-text);
 			border-radius: 8px;
 			position: fixed;
-			top: 24px;
-			right: 24px;
+			top: var(--padding-1);
+			right: var(--padding-1);
 			box-shadow: 0 0 12px -2px var(--bg);
 			z-index: 20;
 		}
@@ -250,9 +250,10 @@
 			max-width: 100vw;
 			height: 100vh;
 			// background-color: var(--bg);
-			padding: 24px;
-			padding-top: calc(24px * 2 + 48px);
+			padding: var(--padding-1);
+			padding-top: calc(var(--padding-1) * 2 + 48px);
 			transform: translateX(100%);
+			animation: none;
 		}
 		.menuOpen {
 			.menu {

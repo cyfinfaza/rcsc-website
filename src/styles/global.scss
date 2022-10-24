@@ -14,6 +14,7 @@ body {
 	--accent2-fg: #d6afff22;
 	--text-muted: #fff6;
 	--hover-transition: 120ms;
+	--padding-1: 24px;
 }
 
 body {
@@ -76,7 +77,6 @@ strong {
 }
 
 .bigHeading {
-	font-family: 'Inter', sans-serif;
 	font-weight: 700;
 	font-size: 2.5rem;
 }
