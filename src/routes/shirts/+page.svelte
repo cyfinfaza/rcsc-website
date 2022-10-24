@@ -2,9 +2,28 @@
 	import HeaderWithImage from '../../components/HeaderWithImage.svelte';
 	import Metadata from '../../components/Metadata.svelte';
 
+	const fp = 12;
+	const cp = 20;
+	const bm = 13;
+	function calcTotalPrice(n) {
+		return Math.max(cp * Math.pow(n, Math.log((fp * bm) / cp) / Math.log(bm)), fp * n);
+	}
+
 	let numShirts = 1;
-	let shirtPrice;
-	$: shirtPrice = 25 - Math.min(numShirts - 1, 13);
+	let nthShirt = 1;
+	let unitPrice;
+	let totalPrice;
+	let marginalPrice;
+	$: unitPrice = calcTotalPrice(numShirts) / numShirts;
+	$: totalPrice = calcTotalPrice(numShirts);
+	$: marginalPrice = calcTotalPrice(nthShirt) - calcTotalPrice(nthShirt - 1);
+
+	const ordinal = (n) =>
+		({ one: 'st', two: 'nd', few: 'rd', other: 'th' }[
+			new Intl.PluralRules('en', { type: 'ordinal' }).select(n)
+		]);
+
+	const isPositiveAndInteger = (n) => n > 0 && n % 1 === 0;
 </script>
 
 <Metadata
@@ -33,27 +52,37 @@
 </ul>
 <h2>Pricing</h2>
 <p>
-	Shirts start at <strong>$25</strong> for a single shirt, but we support bulk pricing for larger orders.
-	That way, you can get your shirts made locally with us, often for a much lower price than online alternatives!
+	Shirts start at <strong>${cp}</strong> for a single shirt, but the price can get as low as
+	<strong>${fp} per shirt</strong> if you order more than one.<br />
 </p>
 <h3>How Bulk Pricing Works</h3>
 <p>
-	For every additional shirt in your order, we lower the base price by $1, until you reach 14
-	shirts. That means shirts can cost as little as <strong>$12 per shirt</strong>!
+	For every additional shirt you order between 1 and {bm} shirts, we reduce the price per shirt until
+	it reaches ${fp}. For more than {bm} shirts, the price per shirt is ${fp}. <br />
+	Don't want to order every shirt at once? With our pricing model, your first shirts will cost more than
+	the base price, but the ones you order later will cost less than the base price, making everything
+	average out. <br /> <strong>See the numbers for yourself below.</strong>
 </p>
-<h3>Base price calculator</h3>
+<h3 id="pricecalculator">See how much you'll pay</h3>
 <p>
-	Enter number of shirts: <input
+	Enter number of shirts: <input type="number" bind:value={numShirts} min="1" step="1" />
+	&rarr;
+	{#if isPositiveAndInteger(numShirts)}
+		Base Price: <strong>${unitPrice.toFixed(2)} per shirt</strong>, Total Price:
+		<strong>${totalPrice.toFixed(2)}</strong>
+	{:else}
+		Invalid number of shirts
+	{/if}
+</p>
+<p>
+	How much will I pay for the <input
 		type="number"
-		style="width: 4em;"
-		bind:value={numShirts}
+		bind:value={nthShirt}
 		min="1"
 		step="1"
-	/>
-	&rarr;
-	{#if numShirts >= 1 && parseInt(numShirts) == numShirts}
-		Base Price: <strong>${shirtPrice} per shirt</strong>, Total Price:
-		<strong>${shirtPrice * numShirts}</strong>
+	/>{ordinal(nthShirt)} shirt? &rarr;
+	{#if isPositiveAndInteger(nthShirt)}
+		<strong>${marginalPrice.toFixed(2)}</strong>
 	{:else}
 		Invalid number of shirts
 	{/if}
@@ -77,3 +106,9 @@
 	<li>Come to one of our meetings</li>
 	<li>Talk to an officer directly (if you know one)</li>
 </ul>
+
+<style>
+	input[type='number'] {
+		width: 3em;
+	}
+</style>
