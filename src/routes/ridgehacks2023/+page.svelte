@@ -10,7 +10,7 @@
 />
 
 <HeaderWithImage imageSrc="/images/ridgehacks_background_graphic.svg">
-	RidgeHacks2023: April 1st, 2023
+	The Hackathon
 </HeaderWithImage>
 
 <p>
@@ -38,3 +38,9 @@
 	For any questions or sponsorship inquiries please contact:
 	<a href="mailto:team@ridgehacks.us">team@ridgehacks.us</a>
 </p>
+<h2>Previous years</h2>
+<ul>
+	<li>
+		<a href="https://2022.ridgehacks.us">2022</a>
+	</li>
+</ul>
