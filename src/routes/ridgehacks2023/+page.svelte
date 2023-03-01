@@ -18,7 +18,7 @@
 	hackathon, RidgeHacks, on <strong>April 1, 2023</strong>!
 </p>
 <p>
-	<a href="https://tally.so/r/3Eqe02" class="action-link">Pre-Register Here</a>
+	<a href="https://organize.mlh.io/participants/events/9287-ridgehacks2023" class="action-link">Pre-Register Here</a>
 </p>
 <h2>About</h2>
 <p>
