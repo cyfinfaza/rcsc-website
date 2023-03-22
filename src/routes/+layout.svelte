@@ -16,7 +16,7 @@
 		},
 		{
 			name: 'RidgeHacks2023',
-			href: '/ridgehacks2023'
+			href: 'https://ridgehacks.us'
 		},
 		{
 			name: 'Registration Form',
