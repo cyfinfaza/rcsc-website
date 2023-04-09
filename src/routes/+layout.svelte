@@ -15,8 +15,8 @@
 			href: '/shirts'
 		},
 		{
-			name: 'RidgeHacks2023',
-			href: 'https://ridgehacks.us'
+			name: 'RidgeHacks',
+			href: '/ridgehacks'
 		},
 		{
 			name: 'Registration Form',

@@ -4,8 +4,8 @@
 </script>
 
 <Metadata
-	title="RidgeHacks2023"
-	description="Ridgehacks2023! A Free Hackathon at Ridge High School"
+	title="RidgeHacks"
+	description="A Free Hackathon at Ridge High School"
 	image="/images/ridgehacks_background_graphic.svg"
 />
 
@@ -13,13 +13,6 @@
 	The Hackathon
 </HeaderWithImage>
 
-<p>
-	We are inviting you to participate in the Ridge High School Computer Science Club's third annual
-	hackathon, RidgeHacks, on <strong>April 1, 2023</strong>!
-</p>
-<p>
-	<a href="https://organize.mlh.io/participants/events/9287-ridgehacks2023" class="action-link">Pre-Register Here</a>
-</p>
 <h2>About</h2>
 <p>
 	For those unfamiliar with the term, a hackathon is a collaborative coding event where beginners
@@ -42,5 +35,8 @@
 <ul>
 	<li>
 		<a href="https://2022.ridgehacks.us">2022</a>
+	</li>
+	<li>
+		<a href="https://2023.ridgehacks.us">2023</a>
 	</li>
 </ul>
