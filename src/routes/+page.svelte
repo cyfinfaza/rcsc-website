@@ -12,25 +12,30 @@
 <HeaderWithImage imageSrc="/images/PXL_20220915_185655306.jpg">
 	Welcome to Comp Sci Club!
 </HeaderWithImage>
+<p></p>
 <p>
-	The Ridge Computer Science Club is a club for students interested in computer science. During club
-	time, you can work on your personal projects, and talk about it with other members of the club, or
-	learn from one of our ongoing workshops.
+	The Ridge Computer Science Club is a club with members who have an interest in anything to do with computer science.
+	All Ridge students are welcome with any level of experence.
+
+	Novice programmers will be able to learn about programming languages from python to java through our 
+	presentations and self guided tutorials. Members will be able to access our hardware and software tools and 
+	materials while being a part of a championship hackathon team!
+
 </p>
 <h2>Where? When?</h2>
 <p>Every Thursday in Room 701 typically from 2:30-4:00 PM.</p>
-<h2>Activities</h2>
+<h2>What we do</h2>
 <ul>
-	<li>
-		<h3>Python Workshop</h3>
-		<p>Learn how to code in Python!</p>
+	<li><h4>
+		Learn how to program from our lectures from python to java through our presentations and self guided tutorials.</h4>
 	</li>
 	<li>
-		<h3>Web Development Workshop</h3>
-		<p>Learn HTML, CSS, and JS.</p>
+		<h4>Colaborate with members on CS projects and compete in hackathons throught NJ</h4>
 	</li>
 	<li>
-		<h3>Hardware Workshop</h3>
-		<p>Learn how to use hardware such as the Arduino to make fun projects.</p>
+		<h4>
+
+		Help run the annual hackathon Ridgehacks which brings together High School students from across NJ. As a club member you have the opportunity to be a part of our hackathon through planning and event activities.
+	</h4>
 	</li>
 </ul>
