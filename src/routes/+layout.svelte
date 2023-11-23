@@ -17,15 +17,15 @@
 		{
 			name: 'RidgeHacks',
 			href: '/ridgehacks'
-		},
-		{
-			name: 'Registration Form',
-			href: 'https://tally.so/r/3xX1qk'
-		},
-		{
-			name: 'Attendance',
-			href: 'https://cap.ridgecompsci.club'
 		}
+		// {
+		// 	name: 'Registration Form',
+		// 	href: 'https://tally.so/r/3xX1qk'
+		// },
+		// {
+		// 	name: 'Attendance',
+		// 	href: 'https://cap.ridgecompsci.club'
+		// }
 		// {
 		// 	name: 'RidgeHacks',
 		// 	href: 'https://ridgehacks.us'
