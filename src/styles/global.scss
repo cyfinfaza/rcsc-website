@@ -110,3 +110,15 @@ a {
 	color: inherit;
 	font-weight: 600;
 }
+
+.margin-list li {
+	margin: 0.5em 0;
+}
+
+.margin-qna-list li:nth-child(2n + 1) {
+	margin-top: 0.5em;
+}
+
+.margin-qna-list li:nth-child(2n) {
+	margin-bottom: 0.5em;
+}
